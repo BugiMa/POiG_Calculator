@@ -1,0 +1,60 @@
+﻿<Window x:Class="Calculator.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Calculator"
+        mc:Ignorable="d"
+        Title="Calculator" Height="500" Width="450">
+
+    <Grid >
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="70"/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            
+        </Grid.RowDefinitions>
+        <!-- TextBlock Display & WholeEquation -->
+        <TextBlock 
+            x:Name="textBlockEquation"  
+            Grid.Row="0" Grid.ColumnSpan="4"  Margin="15,10"
+            TextAlignment="Right" FontSize="20" FontFamily="OCR A"/>
+        <TextBlock 
+            x:Name="textBlockDisplay" Text="0"
+            Grid.Row="1" Grid.ColumnSpan="4" Margin="15,10" 
+            TextAlignment="Right" FontSize="50" FontFamily="OCR A"/>
+        <!-- NumberButtons -->
+        <Button x:Name="button0" Grid.Row="6" Grid.Column="1" Content="0" FontSize="40" FontFamily="OCR A" Click="buttonNumber_Click"/>
+        <Button x:Name="button1" Grid.Row="5" Grid.Column="0" Content="1" FontSize="40" FontFamily="OCR A" Click="buttonNumber_Click"/>
+        <Button x:Name="button2" Grid.Row="5" Grid.Column="1" Content="2" FontSize="40" FontFamily="OCR A" Click="buttonNumber_Click"/>
+        <Button x:Name="button3" Grid.Row="5" Grid.Column="2" Content="3" FontSize="40" FontFamily="OCR A" Click="buttonNumber_Click"/>
+        <Button x:Name="button4" Grid.Row="4" Grid.Column="0" Content="4" FontSize="40" FontFamily="OCR A" Click="buttonNumber_Click"/>
+        <Button x:Name="button5" Grid.Row="4" Grid.Column="1" Content="5" FontSize="40" FontFamily="OCR A" Click="buttonNumber_Click"/>
+        <Button x:Name="button6" Grid.Row="4" Grid.Column="2" Content="6" FontSize="40" FontFamily="OCR A" Click="buttonNumber_Click"/>
+        <Button x:Name="button7" Grid.Row="3" Grid.Column="0" Content="7" FontSize="40" FontFamily="OCR A" Click="buttonNumber_Click"/>
+        <Button x:Name="button8" Grid.Row="3" Grid.Column="1" Content="8" FontSize="40" FontFamily="OCR A" Click="buttonNumber_Click"/>
+        <Button x:Name="button9" Grid.Row="3" Grid.Column="2" Content="9" FontSize="40" FontFamily="OCR A" Click="buttonNumber_Click"/>
+        <!-- Operations & Actions Buttons -->
+        <Button x:Name="buttonClearAll"  Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" Content="CA" FontSize="40" FontFamily="OCR A" Click="buttonClearAll_Click"/>
+        <Button x:Name="buttonClear"     Grid.Row="2" Grid.Column="2" Content="C" FontSize="40" FontFamily="OCR A" Click="buttonClear_Click"/>
+
+        <Button x:Name="buttonAdd"       Grid.Row="2" Grid.Column="3" Content="+" FontSize="40" FontFamily="OCR A" Background="#FFFFB000" Click="buttonOperation_Click"/>
+        <Button x:Name="buttonSub"       Grid.Row="3" Grid.Column="3" Content="-" FontSize="40" FontFamily="OCR A" Background="#FFFFB000" Click="buttonOperation_Click"/>
+        <Button x:Name="buttonTimes"     Grid.Row="4" Grid.Column="3" Content="*" FontSize="40" FontFamily="OCR A" Background="#FFFFB000" Click="buttonOperation_Click"/>
+        <Button x:Name="buttonDivide"    Grid.Row="5" Grid.Column="3" Content="/" FontSize="40" FontFamily="OCR A" Background="#FFFFB000" Click="buttonOperation_Click"/>
+        <Button x:Name="buttonEquals"    Grid.Row="6" Grid.Column="3" Content="=" FontSize="40" FontFamily="OCR A" Background="#FFFFB000" Click="buttonOperation_Click"/>
+        
+        <Button x:Name="buttonComa"      Grid.Row="6" Grid.Column="2" Content="," FontSize="40" FontFamily="OCR A" Click="buttonComa_Click"/>
+        <Button x:Name="buttonPlusMinus" Grid.Row="6" Grid.Column="0" Content="±" FontSize="40" FontFamily="OCR A" Click="buttonPlusMinus_Click"/>
+    </Grid>
+</Window>
